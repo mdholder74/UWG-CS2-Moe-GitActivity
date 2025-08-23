@@ -9,6 +9,8 @@ import java.util.ArrayList;
  * @version Fall 2025
  */
 public class Bill {
+  public static final double TAX = 0.1;
+  public static final double TIP = 0.2;
   private ArrayList<BillItem> items;
 
   /**
