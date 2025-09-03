@@ -1,6 +1,8 @@
 package edu.westga.cs1302.lab2.tests.model.bill_item;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
@@ -9,18 +11,18 @@ import edu.westga.cs1302.lab2.model.BillItem;
 class TestBillItemConstructor {
 
   @Test
-  public void testConstructor_WithValidNameAndAmount() {
+  public void testConstructorWithValidNameAndAmount() {
     
     BillItem item = new BillItem("Gum", 1.99);
     
-    assertNotNull(item, "Constructor should create a non-null object.");
+    assertNotNull("Constructor should create a non-null object.", item);
     assertEquals("Gum", item.getName(), "Name should match the provided value.");
     assertEquals(1.99, item.getAmount(), 0.001, "Amount should match the provided value.");
     
   }
   
   @Test
-  public void testConstructor_WithNullName() {
+  public void testConstructorWithNullName() {
    IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
        new BillItem(null, 1.99);
       });
@@ -30,7 +32,7 @@ class TestBillItemConstructor {
    }
   
   @Test
-  public void testConstructor_WithNullAmount() {
+  public void testConstructorWithNullAmount() {
    IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
        new BillItem("Gum", -1.99);
       });

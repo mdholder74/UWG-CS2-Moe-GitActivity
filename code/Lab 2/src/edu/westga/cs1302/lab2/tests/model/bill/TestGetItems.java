@@ -1,6 +1,8 @@
 package edu.westga.cs1302.lab2.tests.model.bill;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -18,25 +20,25 @@ class TestGetItems {
   }
 
   @Test
-  public void testGetItems_NotNull() {
+  public void testGetItemsNotNull() {
     assertNotNull(this.moeBill.getItems());
     
   }
   
   @Test
-  public void testGetItems_InitiallyEmpty() {
+  public void testGetItemsInitiallyEmpty() {
     assertTrue(this.moeBill.getItems().isEmpty());
   }
   
   @Test
-  public void testGetItems_AddingOneItem() {
+  public void testGetItemsAddingOneItem() {
     BillItem item = new BillItem("Peach Rings", 2.99);
     this.moeBill.addItem(item);
     assertEquals(1, this.moeBill.getItems().size());
   }
   
   @Test
-  public void testGetItems_AddingMultipleItems() {
+  public void testGetItemsAddingMultipleItems() {
     BillItem item1 = new BillItem("Peach Rings", 2.99);
     BillItem item2 = new BillItem("Gummy Bears", 3.49);
     
