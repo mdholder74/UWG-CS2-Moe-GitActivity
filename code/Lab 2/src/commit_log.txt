@@ -1,0 +1,79 @@
+commit 9a4d70c0555fd12406883725255c612c5cad7279
+Author: mdholder74 <mdholder74@gmail.com>
+Date:   Tue Sep 2 20:35:54 2025 -0400
+
+     Added unit tests for the BillView getText() method
+    
+    - Created TestGetText class with 3 test methods covering:
+    1) Empty bill formatting
+    2) Single item bill formatting
+    3) Multiple item bill formatting
+    
+    - Implemented @BeforeEach setup for BillView
+    - Used assertEquals() and AAA testing pattern
+    - These test ensures getText() produces properly formatted bills with accurate calculations with the tax and tip
+
+commit e326f90677509e3f3988873e89b16cd5ecb98d25
+Author: mdholder74 <mdholder74@gmail.com>
+Date:   Mon Sep 1 14:37:46 2025 -0400
+
+     Added unit tests for the BillItem Constructor
+    
+    - Created TestBillItemConstructor class with 3 test methods covering:
+    1) Valid name and amount return
+    2) Null input validation for name with exception handling
+    3) Null input validation for amount with exception handling
+    
+    - Followed AAA (Arrange-Act-Assert) testing pattern
+    - Used assertThrows(), Used assertEqual() and Used assertNotNull() in testing
+
+commit 1d7e556afbbb7f33d79cca1d92493e20206ab45d
+Author: mdholder74 <mdholder74@gmail.com>
+Date:   Mon Sep 1 13:43:48 2025 -0400
+
+     Added unit tests for Bill.getItems() method
+    
+    - Created TestGetItems class with 4 test methods covering:
+    1) Valid single item returned
+    2) Valid mulitple items return
+    3) Valid return for empty
+    4) Valid reutn for Null
+    
+    - Implemented @BeforeEach setup method for consistent test initialization
+    - Used assertEquals(), Used assertTrue() and Used assertNotNull() in testing
+    - These test ensure the getItems() returns the correct bill state
+
+commit 8761bb832eec28be55565c5ef61a2d7ea3eba89d
+Author: mdholder74 <mdholder74@gmail.com>
+Date:   Mon Sep 1 13:20:09 2025 -0400
+
+     Added unit tests for the Bill.addItem() method
+    
+    - Created TestAddItem class with 4 test methods covering:
+    1) Valid single item added
+    2) Valid multiple items added
+    3) Valid duplicate items added
+    4) Null input validation with exception handling
+    
+    - Implemented @BeforeEach setup method for consistent test initialization
+    - Followed AAA (Arrange-Act-Assert) testing pattern
+    - Used assertEquals() and assertThrows() in testing
+
+commit b24b65fb30d06b70763cd7049fec4be74268657c
+Merge: 49b00d5 2a9b3bc
+Author: mdholder74 <mdholder74@gmail.com>
+Date:   Mon Sep 1 12:10:40 2025 -0400
+
+    Merge branch 'dev' of https://github.com/mdholder74/UWG-CS2-Moe-GitActivity into dev
+
+commit 49b00d587c724a5851fa65a3047e4cd7cb48a91d
+Author: mdholder74 <mdholder74@gmail.com>
+Date:   Mon Sep 1 12:09:27 2025 -0400
+
+     Added Lad 2 tests for Bill Constructor
+    
+    1) Added a test to check if the Bill was Null
+    2) Added a test to check if the the Bill was Empty when created
+    
+    This will ensure the Bill Constructor method is working as expected
+

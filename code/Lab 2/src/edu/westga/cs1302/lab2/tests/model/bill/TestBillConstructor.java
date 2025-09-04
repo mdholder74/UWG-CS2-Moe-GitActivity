@@ -2,6 +2,7 @@ package edu.westga.cs1302.lab2.tests.model.bill;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +13,7 @@ class TestBillConstructor {
   @Test
   public void testConstructorCreatesEmptyBill() {
     Bill moeBill = new Bill();
-    assertTrue("The list of items should be empty", moeBill.getItems().isEmpty());
+    assertTrue(moeBill.getItems().isEmpty(), "The list of items should be empty");
   }
   
   @Test

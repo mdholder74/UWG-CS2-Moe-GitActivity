@@ -1,0 +1,90 @@
+mdhol@Moe MINGW64 ~/OneDrive/Documents/GitHub/UWG-CS2-Moe-GitActivity/code/starterLab1 (dev)
+$ git commit --amend -m "Separated view display logic from model logic implementing MVC pattern.
+>
+> 1) Created View Package - established edu.westga.cs1302.lab1.view package to contain all UI-related classes
+2) Created a new class inside the view package - handles logic related to displaying content on the UI separately from logic in the model package
+3) Added getter method to Bill class - enables view classes to access item list data using proper encapsulation
+
+Design decisions: Chose MVC pattern to separate concerns based on UWG coding standards. This architecture improves maintainability of code due to it being separated and makes it easier to test. The getter method allows for proper encapsulat
+ion to access model data."
+[dev 334f654] Separated view display logic from model logic implementing MVC pattern.
+ Date: Sat Aug 23 10:43:45 2025 -0400
+ 9 files changed, 212 insertions(+)
+ create mode 100644 code/starterLab1/Lab 1/.checkstyle
+ create mode 100644 code/starterLab1/Lab 1/.classpath
+ create mode 100644 code/starterLab1/Lab 1/.project
+ create mode 100644 code/starterLab1/Lab 1/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 code/starterLab1/Lab 1/.settings/org.eclipse.jdt.core.prefs
+ create mode 100644 code/starterLab1/Lab 1/bin/.gitignore
+ create mode 100644 code/starterLab1/Lab 1/src/edu/westga/cs1302/lab1/model/Bill.java
+ create mode 100644 code/starterLab1/Lab 1/src/edu/westga/cs1302/lab1/model/BillItem.java
+ create mode 100644 code/starterLab1/Lab 1/src/edu/westga/cs1302/lab1/view/BillFormatter.java
+
+
+mdhol@Moe MINGW64 ~/OneDrive/Documents/GitHub/UWG-CS2-Moe-GitActivity/code/starterLab1 (dev)
+$ git push
+Enumerating objects: 25, done.
+Counting objects: 100% (25/25), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (23/23), 3.74 KiB | 638.00 KiB/s, done.
+Total 23 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/mdholder74/UWG-CS2-Moe-GitActivity.git
+   ea7efdc..334f654  dev -> dev
+
+mdhol@Moe MINGW64 ~/OneDrive/Documents/GitHub/UWG-CS2-Moe-GitActivity/code/starterLab1 (dev)
+$ git add .
+warning: in the working copy of 'code/starterLab1/Lab 1/.checkstyle', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'code/starterLab1/Lab 1/bin/.gitignore', LF will be replaced by CRLF the next time Git touches it
+
+mdhol@Moe MINGW64 ~/OneDrive/Documents/GitHub/UWG-CS2-Moe-GitActivity/code/starterLab1 (dev)
+$ git commit -m "Defined constants  and testing case
+>
+> 1) Created TAX and TIP constants in Bill class
+2) Inside the Bill Formatter class replaced all hardcoded occurrences of TAX and TIP with constant references
+3) Created BillTest class to verify functionality
+4) Setup Checkstyle for formatting
+5) Create commit log text file to store commit history
+
+
+Design decisions: Used constants to eliminate magic numbers. Added testing for development best practices. Setup Checkstyle for
+ consistent formatting."
+[dev bdce2aa] Defined constants  and testing case
+ 7 files changed, 105 insertions(+), 50 deletions(-)
+ create mode 100644 code/starterLab1/Lab 1/CommitLog
+ create mode 100644 code/starterLab1/Lab 1/src/edu/westga/cs1302/lab1/view/BillTest.java
+
+mdhol@Moe MINGW64 ~/OneDrive/Documents/GitHub/UWG-CS2-Moe-GitActivity/code/starterLab1 (dev)
+$ git push
+Enumerating objects: 35, done.
+Counting objects: 100% (35/35), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (19/19), 2.56 KiB | 1.28 MiB/s, done.
+Total 19 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To https://github.com/mdholder74/UWG-CS2-Moe-GitActivity.git
+   334f654..bdce2aa  dev -> dev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
