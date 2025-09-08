@@ -1,4 +1,7 @@
-723cd108dda920037ed0e6fd81ef18b50a538b66 - mdholder74, 15 minutes ago :  Implement GUI behavior for the Bill system
+bc45c09fc07c8dca8679c021d16136acb50e7b46 - mdholder74, Mon Sep 8 12:39:32 2025 -0400 : Added commit history log for the BILL GUI
+
+
+723cd108dda920037ed0e6fd81ef18b50a538b66 - mdholder74, Mon Sep 8 12:22:01 2025 -0400 :  Implement GUI behavior for the Bill system
 1) Declared private fields for Bill and BillView instances for state persistence
 2) Implemented getText() to retrieve user input name and amount from JavaFx TextFields. Implemented type conversion for convert the amount
 3) Created BillItem object from user input (name and amount) to be add to the Bill object
@@ -8,7 +11,7 @@
 Architecture: Uses the MVC pattern model
 
 
-3e71cae3193586c3f5b34ea6f13071410c3738ba - mdholder74, 4 days ago :  Used SceneBuilder to add components to MainWindow.java file
+3e71cae3193586c3f5b34ea6f13071410c3738ba - mdholder74, Thu Sep 4 12:34:46 2025 -0400 :  Used SceneBuilder to add components to MainWindow.java file
 1) Added labels for name and amount
 1) Added labels for name and amount
 2) Added text fields corresponding to labels name and amount
@@ -18,13 +21,13 @@ Architecture: Uses the MVC pattern model
 This is the intial GUI design for the Bill
 
 
-e85a013bbe3b93c6b685fdfdceb73a56bf0e648d - mdholder74, 4 days ago : Setting Up JavaFx Lab3
+e85a013bbe3b93c6b685fdfdceb73a56bf0e648d - mdholder74, Thu Sep 4 10:46:07 2025 -0400 : Setting Up JavaFx Lab3
 Added Bill model classes to javafx sample project
 Renamed project and base package for lab3 along with corresponding references.
 Did not incorporate tests for Bill project classes yet.
 
 
-9a4d70c0555fd12406883725255c612c5cad7279 - mdholder74, 6 days ago :  Added unit tests for the BillView getText() method
+9a4d70c0555fd12406883725255c612c5cad7279 - mdholder74, Tue Sep 2 20:35:54 2025 -0400 :  Added unit tests for the BillView getText() method
 - Created TestGetText class with 3 test methods covering:
 1) Empty bill formatting
 2) Single item bill formatting
@@ -35,7 +38,7 @@ Did not incorporate tests for Bill project classes yet.
 - These test ensures getText() produces properly formatted bills with accurate calculations with the tax and tip
 
 
-e326f90677509e3f3988873e89b16cd5ecb98d25 - mdholder74, 7 days ago :  Added unit tests for the BillItem Constructor
+e326f90677509e3f3988873e89b16cd5ecb98d25 - mdholder74, Mon Sep 1 14:37:46 2025 -0400 :  Added unit tests for the BillItem Constructor
 - Created TestBillItemConstructor class with 3 test methods covering:
 1) Valid name and amount return
 2) Null input validation for name with exception handling
@@ -45,7 +48,7 @@ e326f90677509e3f3988873e89b16cd5ecb98d25 - mdholder74, 7 days ago :  Added unit 
 - Used assertThrows(), Used assertEqual() and Used assertNotNull() in testing
 
 
-1d7e556afbbb7f33d79cca1d92493e20206ab45d - mdholder74, 7 days ago :  Added unit tests for Bill.getItems() method
+1d7e556afbbb7f33d79cca1d92493e20206ab45d - mdholder74, Mon Sep 1 13:43:48 2025 -0400 :  Added unit tests for Bill.getItems() method
 - Created TestGetItems class with 4 test methods covering:
 1) Valid single item returned
 2) Valid mulitple items return
@@ -57,7 +60,7 @@ e326f90677509e3f3988873e89b16cd5ecb98d25 - mdholder74, 7 days ago :  Added unit 
 - These test ensure the getItems() returns the correct bill state
 
 
-8761bb832eec28be55565c5ef61a2d7ea3eba89d - mdholder74, 7 days ago :  Added unit tests for the Bill.addItem() method
+8761bb832eec28be55565c5ef61a2d7ea3eba89d - mdholder74, Mon Sep 1 13:20:09 2025 -0400 :  Added unit tests for the Bill.addItem() method
 - Created TestAddItem class with 4 test methods covering:
 1) Valid single item added
 2) Valid multiple items added
@@ -69,26 +72,26 @@ e326f90677509e3f3988873e89b16cd5ecb98d25 - mdholder74, 7 days ago :  Added unit 
 - Used assertEquals() and assertThrows() in testing
 
 
-b24b65fb30d06b70763cd7049fec4be74268657c - mdholder74, 7 days ago : Merge branch 'dev' of https://github.com/mdholder74/UWG-CS2-Moe-GitActivity into dev
+b24b65fb30d06b70763cd7049fec4be74268657c - mdholder74, Mon Sep 1 12:10:40 2025 -0400 : Merge branch 'dev' of https://github.com/mdholder74/UWG-CS2-Moe-GitActivity into dev
 
 
-49b00d587c724a5851fa65a3047e4cd7cb48a91d - mdholder74, 7 days ago :  Added Lad 2 tests for Bill Constructor
+49b00d587c724a5851fa65a3047e4cd7cb48a91d - mdholder74, Mon Sep 1 12:09:27 2025 -0400 :  Added Lad 2 tests for Bill Constructor
 1) Added a test to check if the Bill was Null
 2) Added a test to check if the the Bill was Empty when created
 
 This will ensure the Bill Constructor method is working as expected
 
 
-2a9b3bcdb25c7713ed420e32c1335d71a2eaac4b - Mahogany (Moe) Holder, 2 weeks ago : Delete Lab 1/src/edu/westga/cs1302/lab1/view/BillFormatter.java
+2a9b3bcdb25c7713ed420e32c1335d71a2eaac4b - Mahogany (Moe) Holder, Sat Aug 23 12:46:39 2025 -0400 : Delete Lab 1/src/edu/westga/cs1302/lab1/view/BillFormatter.java
 Remove duplicate file from Lab1 folder
 
-26ceb319ebfe2a1233006f9d18d707fac133a053 - Mahogany (Moe) Holder, 2 weeks ago : Delete Lab 1/src/edu/westga/cs1302/lab1/model/BillItem.java
+26ceb319ebfe2a1233006f9d18d707fac133a053 - Mahogany (Moe) Holder, Sat Aug 23 12:45:46 2025 -0400 : Delete Lab 1/src/edu/westga/cs1302/lab1/model/BillItem.java
 Remove duplicate file from Lab1 folder
 
-bb356354448e512317df9e38bacfcb49aad27557 - Mahogany (Moe) Holder, 2 weeks ago : Delete Lab 1/src/edu/westga/cs1302/lab1/model/Bill.java
+bb356354448e512317df9e38bacfcb49aad27557 - Mahogany (Moe) Holder, Sat Aug 23 12:45:28 2025 -0400 : Delete Lab 1/src/edu/westga/cs1302/lab1/model/Bill.java
 Remove duplicate file from Lab1 folder
 
-bdce2aaab0d8b04dce381727942f762d3007e529 - mdholder74, 2 weeks ago : Defined constants  and testing case
+bdce2aaab0d8b04dce381727942f762d3007e529 - mdholder74, Sat Aug 23 12:25:09 2025 -0400 : Defined constants  and testing case
 1) Created TAX and TIP constants in Bill class
 2) Inside the Bill Formatter class replaced all hardcoded occurrences of TAX and TIP with constant references
 3) Created BillTest class to verify functionality
@@ -98,7 +101,7 @@ bdce2aaab0d8b04dce381727942f762d3007e529 - mdholder74, 2 weeks ago : Defined con
 Design decisions: Used constants to eliminate magic numbers. Added testing for development best practices. Setup Checkstyle for consistent formatting.
 
 
-334f6542b12360819a06689b0c82cff9c01a591e - mdholder74, 2 weeks ago : Separated view display logic from model logic implementing MVC pattern.
+334f6542b12360819a06689b0c82cff9c01a591e - mdholder74, Sat Aug 23 10:43:45 2025 -0400 : Separated view display logic from model logic implementing MVC pattern.
 1) Created View Package - established edu.westga.cs1302.lab1.view package to contain all UI-related classes
 2) Created a new class inside the view package - handles logic related to displaying content on the UI separately from logic in the model package
 3) Added getter method to Bill class - enables view classes to access item list data using proper encapsulation
@@ -106,7 +109,7 @@ Design decisions: Used constants to eliminate magic numbers. Added testing for d
 Design decisions: Chose MVC pattern to separate concerns based on UWG coding standards. This architecture improves maintainability of code due to it being separated and makes it easier to test. The getter method allows for proper encapsulation to access model data.
 
 
-ea7efdc384a1acfe2ad4637c340387ac9f3ccd6d - mdholder74, 2 weeks ago : Separated view display logic from model logic
+ea7efdc384a1acfe2ad4637c340387ac9f3ccd6d - mdholder74, Sat Aug 23 08:58:32 2025 -0400 : Separated view display logic from model logic
 1) Created View Package
 2) Created a new class inside the view package to handle the view
 display logic
@@ -114,15 +117,15 @@ display logic
 Bill
 
 
-4dcbd59b3792c3ab2859d315bb352b0576aa8e7d - mdholder74, 3 weeks ago : added folder
+4dcbd59b3792c3ab2859d315bb352b0576aa8e7d - mdholder74, Thu Aug 21 10:35:30 2025 -0400 : added folder
 
 
-4a6a26eaba6f28e78b7b56419f2b9a45c563a31c - mdholder74, 3 weeks ago : Adding Base Project Structure
+4a6a26eaba6f28e78b7b56419f2b9a45c563a31c - mdholder74, Thu Aug 21 09:59:26 2025 -0400 : Adding Base Project Structure
 1) Creating the README for
 the project (/README.md)
 2) Creating the code directory for
 the project (/code/)
 
 
-49926b2970a1e800be69cbe549938da89e49c97a - Mahogany (Moe) Holder, 3 weeks ago : Initial commit
+49926b2970a1e800be69cbe549938da89e49c97a - Mahogany (Moe) Holder, Tue Aug 19 10:04:39 2025 -0400 : Initial commit
 
