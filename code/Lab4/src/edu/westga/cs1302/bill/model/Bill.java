@@ -61,5 +61,16 @@ public class Bill {
 	public ArrayList<BillItem> getItems() {
 		return new ArrayList<BillItem>(Arrays.asList(Arrays.copyOfRange(this.items, 0, this.size)));
 	}
+	
+	 /** Returns the items in the bill as an array
+   * 
+   * @precondition none
+   * @postcondition none
+   * 
+   * @return an array containing the items in the bill
+   */
+  public BillItem[] getItemsArray() {
+    return Arrays.copyOfRange(this.items, 0, this.size);
+  }
 
 }
