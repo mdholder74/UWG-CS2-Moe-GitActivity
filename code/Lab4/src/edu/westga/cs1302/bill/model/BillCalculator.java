@@ -64,7 +64,7 @@ public class BillCalculator {
    * @param billItems the array of BillItem objects to calculate total for
    * @return the total amount including subtotal, tax, and tip
    */
-  public static double calculateTotal(BillItem[] billItems) {
+  public static double calculateTotalIems(BillItem[] billItems) {
     double subtotal = calculateSubtotalItems(billItems);
     double tax = calculateTaxItems(billItems);
     double tip = calculateTipItems(billItems);
