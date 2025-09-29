@@ -3,12 +3,15 @@ package edu.westga.cs1302.lab5.persistence;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
+import com.opencsv.exceptions.CsvValidationException;
 
 import edu.westga.cs1302.lab5.model.Student;
 
@@ -63,7 +66,6 @@ public class StudentDataPersistenceManager {
       }
 	    
 	    try (CSVWriter writer = new CSVWriter(new FileWriter(fileLocation))) {
-	      writer.writeNext(new String[] {"Name", "Grade"});
 	      
 	      for (Student currStudent : students) {
 	        if(currStudent != null) {
@@ -83,27 +85,32 @@ public class StudentDataPersistenceManager {
 	 * @return the set of students loaded
 	 * @throws FileNotFoundException no file exists at FILE_LOCATION
 	 * @throws IOException unable to read file due to formatting issue 
+	 * @throws CsvValidationException 
 	 */
-	public static Student[] loadStudentData() throws FileNotFoundException, IOException {
-		ArrayList<Student> students = new ArrayList<Student>();
-		File inputFile = new File(StudentDataPersistenceManager.FILE_LOCATION);
-		
-		try (Scanner reader = new Scanner(inputFile)) {
-			while (reader.hasNextLine()) {
-				String name = reader.nextLine();
-				if (!reader.hasNextLine()) {
-					throw new IOException("missing grade for " + name);
-				}
-				int grade = Integer.parseInt(reader.nextLine());
-				students.add(new Student(name, grade));
-			}
-		} catch (NumberFormatException error) {
-			throw new IOException("grade value was not formatted as an integer (" + error.getMessage() + ")");
-		} catch (IllegalArgumentException error) {
-			throw new IOException(error.getMessage());
-		}
-		
-		return students.toArray(new Student[0]);
-	}
-	
+	 public static Student[] loadStudentData(String fileLocation) throws FileNotFoundException, IOException, CsvValidationException {
+	    ArrayList<Student> students = new ArrayList<Student>();
+	    File inputFile = new File(fileLocation);
+	    
+	    try (CSVReader reader = new CSVReader(new FileReader(inputFile))) {
+        String[] nextcsvRow = reader.readNext();
+        
+        
+        while (nextcsvRow!=  null) {
+          if (nextcsvRow.length >= 2) {
+            String name = nextcsvRow[0];
+            int grade = Integer.parseInt(nextcsvRow[1]);
+            students.add(new Student(name, grade));
+          }
+          nextcsvRow = reader.readNext();
+        }
+
+      } catch (NumberFormatException error) {
+        throw new IOException("grade value was not formatted as an integer (" + error.getMessage() + ")");
+      } catch (IllegalArgumentException error) {
+        throw new IOException(error.getMessage());
+        }
+	    return students.toArray(new Student[0]);
+	    }
 }
+	 
+	 

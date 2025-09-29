@@ -2,6 +2,8 @@ package edu.westga.cs1302.lab5.views;
 
 import java.io.IOException;
 
+import com.opencsv.exceptions.CsvValidationException;
+
 import edu.westga.cs1302.lab5.model.GradeCalculator;
 import edu.westga.cs1302.lab5.model.Student;
 import edu.westga.cs1302.lab5.persistence.StudentDataPersistenceManager;
@@ -49,14 +51,18 @@ public class MainWindow {
 
 	private void loadStudents() {
 		try {
-			Student[] students = StudentDataPersistenceManager.loadStudentData();
+			Student[] students = StudentDataPersistenceManager.loadStudentData("students.csv");
 			this.students.getItems().clear();
 			this.students.getItems().addAll(students);
 		} catch (IOException error) {
 			Alert alert = new Alert(Alert.AlertType.ERROR);
 			alert.setContentText(error.getMessage());
 			alert.showAndWait();
-		}
+		} catch (CsvValidationException error) {
+      Alert alert = new Alert(Alert.AlertType.ERROR);
+      alert.setContentText(error.getMessage());
+      alert.showAndWait();
+    }
 	}
 
 	@FXML
