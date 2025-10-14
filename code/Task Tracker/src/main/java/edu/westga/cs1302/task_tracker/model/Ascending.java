@@ -2,7 +2,7 @@ package edu.westga.cs1302.task_tracker.model;
 
 import java.util.Comparator;
 
-/** Comparator that compares tasks.
+/** This class compares tasks
  * 
  * @author Moe Holder
  * @version Fall 2025
