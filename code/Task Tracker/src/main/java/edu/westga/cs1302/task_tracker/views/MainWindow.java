@@ -16,6 +16,10 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
+import edu.westga.cs1302.task_tracker.model.Ascending;
+import edu.westga.cs1302.task_tracker.model.Descending;
+import javafx.collections.FXCollections;
+
 /** Controller class for MainWindow of the Task Tracker system.
  * 
  * @author CS 1302
@@ -78,7 +82,11 @@ public class MainWindow {
     
     @FXML
     void sortTasks(ActionEvent event) {
-
+      Comparator<Task> selectedComparator = this.order.getValue();
+      if (selectedComparator != null) {
+        FXCollections.sort(this.tasks.getItems(), selectedComparator);
+      }
+      
     }
 
     /** Perform any needed initialization of UI components and underlying objects.
@@ -87,5 +95,9 @@ public class MainWindow {
     public void initialize() {
     	this.priority.getItems().addAll(TaskPriority.HIGH, TaskPriority.MEDIUM, TaskPriority.LOW);
     	this.priority.setValue(this.priority.getItems().get(0));
+    	
+    	this.order.getItems().add(new Ascending());
+    	this.order.getItems().add(new Descending());
+    	this.order.setValue(this.order.getItems().get(0));
     }
 }
